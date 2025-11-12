@@ -1,6 +1,8 @@
 # Control de Subway Surfers con la Cabeza (MediaPipe Pose + OpenCV)
 
+[![CI](https://github.com/hugoocaabero/subway_surfers/actions/workflows/ci.yml/badge.svg)](https://github.com/hugoocaabero/subway_surfers/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
+![opencv-python](https://img.shields.io/pypi/v/opencv-python?label=opencv-python) ![mediapipe](https://img.shields.io/pypi/v/mediapipe?label=mediapipe) ![pyautogui](https://img.shields.io/pypi/v/pyautogui?label=pyautogui)
 
 Controla Subway Surfers (o juegos similares en emulador) moviendo la cabeza. El sistema usa MediaPipe Pose para detectar la posición de la nariz y `pyautogui` para enviar pulsaciones de teclas al emulador.
 
@@ -15,6 +17,13 @@ Controla Subway Surfers (o juegos similares en emulador) moviendo la cabeza. El 
 # Dentro de esta carpeta (subway_surfers)
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+### Instalación rápida (Linux/Mac)
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -38,6 +47,11 @@ Por defecto, las teclas están configuradas para BlueStacks: flechas `up/down/le
 - Enfoca la ventana del emulador para que `pyautogui` envíe las teclas correctamente.
 - Si las teclas no se envían, se mostrará “SIMULACIÓN”; instala `pyautogui` y ejecuta como administrador si es necesario.
 - Mejora la iluminación y evita fondos muy complejos para una detección más estable.
+
+### Problemas comunes
+- En macOS, autoriza “Accesibilidad” para `pyautogui` en Preferencias del Sistema.
+- En Linux con Wayland, `pyautogui` puede requerir Xorg.
+- En emuladores, verifica que las teclas estén mapeadas a `up/down/left/right`.
 
 ## Licencia
 Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
