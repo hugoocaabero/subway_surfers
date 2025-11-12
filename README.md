@@ -27,6 +27,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### Entorno de desarrollo (lint/format)
+```powershell
+pip install -r dev-requirements.txt
+ruff check .
+black .
+```
+
 ## Uso
 ```powershell
 python subway_surfers.py
@@ -52,6 +59,14 @@ Por defecto, las teclas están configuradas para BlueStacks: flechas `up/down/le
 - En macOS, autoriza “Accesibilidad” para `pyautogui` en Preferencias del Sistema.
 - En Linux con Wayland, `pyautogui` puede requerir Xorg.
 - En emuladores, verifica que las teclas estén mapeadas a `up/down/left/right`.
+
+## Releases
+Publica una versión creando un tag:
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+El workflow `Release` adjuntará un `.zip` con el script y archivos esenciales.
 
 ## Licencia
 Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
