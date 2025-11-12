@@ -34,6 +34,14 @@ ruff check .
 black .
 ```
 
+### Pre-commit hooks
+```powershell
+pip install -r dev-requirements.txt
+pre-commit install
+# Ejecutar sobre todos los archivos la primera vez
+pre-commit run --all-files
+```
+
 ## Uso
 ```powershell
 python subway_surfers.py
