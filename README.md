@@ -1,5 +1,7 @@
 # Control de Subway Surfers con la Cabeza (MediaPipe Pose + OpenCV)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
+
 Controla Subway Surfers (o juegos similares en emulador) moviendo la cabeza. El sistema usa MediaPipe Pose para detectar la posición de la nariz y `pyautogui` para enviar pulsaciones de teclas al emulador.
 
 ## Requisitos
@@ -36,3 +38,6 @@ Por defecto, las teclas están configuradas para BlueStacks: flechas `up/down/le
 - Enfoca la ventana del emulador para que `pyautogui` envíe las teclas correctamente.
 - Si las teclas no se envían, se mostrará “SIMULACIÓN”; instala `pyautogui` y ejecuta como administrador si es necesario.
 - Mejora la iluminación y evita fondos muy complejos para una detección más estable.
+
+## Licencia
+Este proyecto se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
